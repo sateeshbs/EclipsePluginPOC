@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+<jaxrs:server id="customerService" address="/">
+    
+    <jaxrs:providers>
+      <ref bean="authorizationFilter" />
+    </jaxrs:providers>
+    <bean id="authorizationFilter" class="com.utils.AuthenticationHandler">
+        <!-- authorization bean properties -->
+    </bean>
+</jaxrs:server>
+</beans>
