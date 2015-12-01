@@ -17,11 +17,12 @@ public class AuthenticationHandler implements RequestHandler {
         String password = policy.getPassword(); 
         if (isAuthenticated(username, password)) {
         	
+        	/* Enable this code when HttpOverride.java enabled in web.xml
         	String reqURL = (String)m.get(Message.REQUEST_URL);
         	int index = PSLStringUtil.ordinalIndexOf(reqURL, '/', 5);
         	if(index >0){
         		return Response.status(404).header("Not Found", reqURL).build();
-        	}
+        	}  */
         	
         	return null;
         	

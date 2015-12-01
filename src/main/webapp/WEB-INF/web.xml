@@ -34,10 +34,13 @@
 		</servlet-class>
 		<init-param>
 			<param-name>jaxrs.serviceClasses</param-name>
-			<param-value>com.example.ChangeStudentDetailsImpl,
+			<param-value>
+			com.psl.rest.impl.GitRestOperationsImpl
+			</param-value>
+		<!-- 	<param-value>com.example.ChangeStudentDetailsImpl,
 			com.example.TestService,
 			com.psl.rest.impl.GitRestOperationsImpl,
-			com.utils.Logout</param-value>
+			com.utils.Logout</param-value>  -->
 		</init-param>
 		<init-param>
 			<param-name>jaxrs.address</param-name>
@@ -48,7 +51,7 @@
   <param-value>
       org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider
       (writeXsiType=false),
-      com.filters.HttpOverride,
+      <!--  com.filters.HttpOverride,  -->
       com.filters.AuthenticationHandler
   </param-value> 
 </init-param>
